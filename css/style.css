@@ -1,0 +1,335 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box0;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* :any-link{
+  text-decoration: none;
+  color: slateblue;
+} */
+
+html {
+  scroll-behavior: smooth;
+}
+
+ul {
+  list-style: none;
+}
+/* header  */
+header {
+  position: fixed;
+  top: 0;
+  z-index: 111;
+  width: 100%;
+  background-color: blue;
+}
+header .content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin-inline: auto;
+  padding: 10px;
+  /* border-bottom: 1px solid #ccc; */
+}
+@media (max-width: 767px) {
+  header .content {
+    flex-direction: column;
+  }
+}
+header .logo {
+  width: 60px;
+  height: 60px;
+}
+header ul {
+  display: flex;
+}
+@media (max-width: 767px) {
+  header ul {
+    margin-top: 10px;
+  }
+}
+header ul li {
+  margin-inline-start: 19px;
+}
+header ul li a {
+  color: white;
+  text-decoration: none;
+}
+@media (max-width: 767px) {
+  header ul li a {
+    font-size: 10px;
+  }
+}
+/* landgin */
+.landing {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: url("../imgs/landing.jpg");
+  background-size: cover;
+  position: relative;
+}
+.landing::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #000000b8;
+}
+.landing .content {
+  width: 60%;
+  text-align: center;
+  position: relative;
+  color: white;
+}
+@media (max-width: 767px) {
+  .landing .content {
+    width: 80%;
+  }
+}
+.landing .content h2 {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+@media (max-width: 767px) {
+  .landing .content h2 {
+    font-size: 28px;
+  }
+}
+.landing .content p {
+  width: 80%;
+  margin-inline: auto;
+  line-height: 1.6;
+}
+.landing .link {
+  margin-top: 20px;
+}
+.landing .link button {
+  border: none;
+  padding: 6px 15px;
+  border-radius: 5px;
+  font-weight: 500;
+  color: white;
+  font-weight: bold;
+}
+.landing .link button:first-child {
+  background-color: yellow;
+}
+.landing .link button:last-child {
+  background-color: blue;
+}
+/* welcom  */
+.welcome {
+  padding-block: 100px;
+}
+.welcome h2 {
+  text-align: center;
+  font-size: 40px;
+}
+@media (max-width: 767px) {
+  .welcome h2 {
+    font-size: 30px;
+  }
+}
+.welcome .content {
+  margin-top: 40px;
+  margin-inline: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 767px) {
+  .welcome .content {
+    flex-direction: column;
+  }
+}
+.welcome .content .card {
+  width: 250px;
+  text-align: center;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc;
+  margin-inline: 15px;
+  text-align: center;
+  position: relative;
+}
+.welcome .content .card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  transition: 0.5s;
+  background-color: #afa6a6;
+  z-index: -1;
+}
+.welcome .content .card:hover::before {
+  width: 100%;
+  height: 100%;
+}
+.card .icon {
+  font-size: 40px;
+  margin-bottom: 14px;
+  color: blue;
+}
+
+/* end eman salah */
+/* start medical */
+.medical h2 {
+  font-size: 50px;
+  text-transform: capitalize;
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+/* section cards  */
+
+.parent {
+  padding-block: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  margin-inline: auto;
+  flex-wrap: wrap;
+  gap: 100px;
+}
+.parent .card {
+  text-align: center;
+  position: relative;
+}
+
+.parent .card .text {
+  position: absolute;
+  top: 0;
+  left: 0px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  width: 235px;
+  height: 235px;
+  background-color: #afa6a6;
+  display: none;
+}
+.card:hover .text {
+  display: inline-flex;
+}
+.card .text h3 {
+  margin: 10px auto;
+  color: rgb(48, 48, 163);
+  font-weight: bold;
+  font-size: 20px;
+}
+.card .text p {
+  margin-top: 15px;
+}
+.card .text .icon {
+  margin-block: 20px;
+}
+/*start staf*/
+.staf h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.staf .father {
+  display: flex;
+  flex-wrap: wrap;
+}
+.staf .father {
+  justify-content: center;
+}
+.staf .father .card2 {
+  border: 2px solid rgba(161, 156, 156, 0.682);
+  width: 280px;
+  height: 200px;
+  margin: 20px 50px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 20px;
+}
+.staf .father .card2 i {
+  font-size: 30px;
+  color: blue;
+  padding-inline: 10px;
+}
+.staf .father .card2 .string {
+  text-align: left;
+  margin-left: 15px;
+}
+.staf .father .card2 .string h3 {
+  margin-bottom: 10px;
+}
+.staf .father .card2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  background-color: #afa6a6;
+  z-index: -1;
+  transition: 0.5s;
+}
+.staf .father .card2:hover::before {
+  width: 100%;
+  height: 100%;
+}
+/*start the final*/
+.final {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 150px;
+  margin-inline: 30px;
+}
+.final .information h1 {
+  margin-bottom: 20px;
+}
+.final .information .bar {
+  line-height: 30px;
+  color: #6f6c6cf1;
+  margin-bottom: 30px;
+}
+body > div.final > div.imge > img {
+  width: 500px;
+  height: 400px;
+  max-width: 100%;
+}
+.final .information .list .first {
+  display: flex;
+  line-height: 40px;
+  align-items: center;
+}
+.final .information .list .first i {
+  color: blue;
+  margin-right: 5px;
+}
+.final .information .list .first p {
+  color: #6f6c6cf1;
+}
+@media (max-width: 1110px) {
+  .final {
+    flex-direction: column;
+  }
+  .final .information .imge {
+    overflow: auto;
+  }
+}
+
+/*end the final*/
